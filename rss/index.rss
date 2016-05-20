@@ -1,6 +1,6 @@
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Daniel Röhers Moura</title><description>&lt;p&gt;JavaScript Lover | Web Evangelist&lt;/p&gt;
 
-&lt;p&gt;Software Developer Engineer at &lt;a href="http://handson.tv/"&gt;HandsOn.TV&lt;/a&gt;&lt;/p&gt;</description><link>http://localhost:2368/</link><generator>Ghost 0.8</generator><lastBuildDate>Fri, 20 May 2016 17:15:43 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>{{ Mustache }}</title><description>&lt;p&gt;Bueno... Esse post não será longo, vamos direto ao ponto.&lt;/p&gt;
+&lt;p&gt;Software Developer Engineer at &lt;a href="http://handson.tv/"&gt;HandsOn.TV&lt;/a&gt;&lt;/p&gt;</description><link>http://localhost:2368/</link><generator>Ghost 0.8</generator><lastBuildDate>Fri, 20 May 2016 17:33:32 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>{{ Mustache }}</title><description>&lt;p&gt;Bueno... Esse post não será longo, vamos direto ao ponto.&lt;/p&gt;
 
 &lt;p&gt;Você provavelmente já passou por algo assim algum dia:&lt;/p&gt;
 
