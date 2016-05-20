@@ -1001,6 +1001,7 @@ body.nav-opened .nav {
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
     color: #aaaaaa;
+    font-size: 1em;
 }
 .home-template .page-description p {
     margin-bottom: 5px;
