@@ -1,6 +1,6 @@
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Daniel Röhers Moura</title><description>&lt;p&gt;JavaScript Lover | Web Evangelist&lt;/p&gt;
 
-&lt;p&gt;Software Developer Engineer at &lt;a href="http://handson.tv/"&gt;HandsOn.TV&lt;/a&gt;&lt;/p&gt;</description><link>http://localhost:2368/</link><generator>Ghost 0.8</generator><lastBuildDate>Fri, 20 May 2016 16:12:59 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>{{ Mustache }}</title><description>&lt;p&gt;Bueno... Esse post não será longo, vamos direto ao ponto.&lt;/p&gt;
+&lt;p&gt;Software Developer Engineer at &lt;a href="http://handson.tv/"&gt;HandsOn.TV&lt;/a&gt;&lt;/p&gt;</description><link>http://localhost:2368/</link><generator>Ghost 0.8</generator><lastBuildDate>Fri, 20 May 2016 17:15:43 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>{{ Mustache }}</title><description>&lt;p&gt;Bueno... Esse post não será longo, vamos direto ao ponto.&lt;/p&gt;
 
 &lt;p&gt;Você provavelmente já passou por algo assim algum dia:&lt;/p&gt;
 
@@ -390,7 +390,7 @@ document.getElementById('target').innerHTML = output;
 
 &lt;p&gt;&lt;strong&gt;E o que irá postar Daniel?&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Não faço ideia. Provável que será quase tudo relacionado a tecnologia,&lt;/p&gt;</description><link>http://localhost:2368/2016/02/05/welcome-to-ghost/</link><guid isPermaLink="false">4ea537cd-0b50-4063-b12e-949bf874e466</guid><category>Getting Started</category><dc:creator>Daniel Röhers Moura</dc:creator><pubDate>Fri, 05 Feb 2016 21:27:00 GMT</pubDate><content:encoded>&lt;p&gt;Finalmente depois de muito tempo (anos) resolvi criar um mero blog.&lt;/p&gt;
+&lt;p&gt;Não faço ideia. Provável que será quase tudo relacionado a tecnologia,&lt;/p&gt;</description><link>http://localhost:2368/2016/02/05/hello-world/</link><guid isPermaLink="false">4ea537cd-0b50-4063-b12e-949bf874e466</guid><category>Getting Started</category><dc:creator>Daniel Röhers Moura</dc:creator><pubDate>Fri, 05 Feb 2016 21:27:00 GMT</pubDate><content:encoded>&lt;p&gt;Finalmente depois de muito tempo (anos) resolvi criar um mero blog.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Por que agora?&lt;/strong&gt;&lt;/p&gt;
 
