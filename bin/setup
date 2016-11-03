@@ -3,6 +3,13 @@
 # Set up Jekyll site. Run this script immediately after cloning the codebase.
 # https://github.com/thoughtbot/guides/tree/master/protocol
 
+if [ `git branch | grep jekyll` ]
+then
+  git checkout jekyll
+else
+  git checkout -b jekyll
+fi
+
 # Exit if any subcommand fails
 set -e
 
