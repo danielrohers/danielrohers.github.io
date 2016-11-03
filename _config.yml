@@ -1,0 +1,63 @@
+# Mandatory settings
+
+baseurl: /
+name: Daniel Röhers Moura
+paginate: 25
+paginate_path: "/posts/page/:num/"
+url: https://danielrohers.com # add site url http://example.com/
+blog_theme: light # Or use dark
+
+# Optional settings
+
+discus_identifier: danielrohers # Add your Disqus identifier
+ga_analytics: UA-73370942-1 # Add your GA Tracking Id
+rss_enabled: true # Change to false if not
+social:
+  dribbble: # Add your Dribbble link
+  facebook: https://facebook.com/danielrohers # Add your Facebook link
+  github: https://github.com/danielrohers # Add your GitHub link
+  linkedin: https://linkedin.com/in/danielrohers/en # Add your LinkedIn link
+  twitter: danielrohers # Add your Twitter handle
+
+# Important settings (change at own risk)
+
+assets:
+  compress:
+    css: true
+    js: true
+  features:
+    automatic_img_size: false
+  sources:
+    - _assets/bower
+    - _assets/fonts
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _vendor/
+collections:
+  my_tags:
+    output: true
+    permalink: /tag/:slug/
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: articles_by_tag
+exclude:
+  - .bowerrc
+  - .travis.yml
+  - bin/*
+  - bower.json
+  - circle.yml
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+gems:
+  - jekyll-assets
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-admin
+permalink: /:slug
