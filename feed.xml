@@ -1,20 +1,44 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Daniel Röhers Moura</title>
+    <description></description>
+    <link>https://danielrohers.com</link>
+    <atom:link href="https://danielrohers.com/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <title>Mustache</title>
+        <description>Bueno... Esse post não será longo, vamos direto ao ponto.</description>
+        <pubDate>Thu, 19 May 2016 12:00:00 -0300</pubDate>
+        <link>https://danielrohers.com/mustache</link>
+        <guid isPermaLink="true">https://danielrohers.com/mustache</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Adeus Callback Hell</title>
+        <description>Callback hell, por incrível que pareça é algo muito utilizado. Por qual motivo? Não faço ideia, cada caso um caso... :)</description>
+        <pubDate>Sun, 27 Mar 2016 12:00:00 -0300</pubDate>
+        <link>https://danielrohers.com/adeus-callback-hell</link>
+        <guid isPermaLink="true">https://danielrohers.com/adeus-callback-hell</guid>
+      </item>
+    
+      <item>
+        <title>Seu blog com Hexo</title>
+        <description>Quando decidi criar o blog, uma coisa era certa, iria hospedar no GitHub através do GitHub Pages.
+
+Mas por que nele? Ora... É gratuito e funciona muito bem :)</description>
+        <pubDate>Tue, 09 Feb 2016 12:00:00 -0200</pubDate>
+        <link>https://danielrohers.com/seu-blog-com-hexo</link>
+        <guid isPermaLink="true">https://danielrohers.com/seu-blog-com-hexo</guid>
+      </item>
+    
+      <item>
+        <title>Hello World Tchê</title>
+        <description>Finalmente depois de muito tempo (anos) resolvi criar um mero blog.</description>
+        <pubDate>Fri, 05 Feb 2016 12:00:00 -0200</pubDate>
+        <link>https://danielrohers.com/hello-world-tche</link>
+        <guid isPermaLink="true">https://danielrohers.com/hello-world-tche</guid>
+      </item>
+    
   </channel>
 </rss>

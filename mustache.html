@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Daniel Röhers Moura | Mustache</title>
+  <meta name="description" content="Bueno... Esse post não será longo, vamos direto ao ponto.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Mustache">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danielrohers.com/mustache">
+  <meta property="og:description" content="Bueno... Esse post não será longo, vamos direto ao ponto.">
+  <meta property="og:site_name" content="Daniel Röhers Moura">
+  <meta property="og:image" content="https://danielrohers.com/assets/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://danielrohers.com/mustache">
+  <meta name="twitter:title" content="Mustache">
+  <meta name="twitter:description" content="Bueno... Esse post não será longo, vamos direto ao ponto.">
+  <meta name="twitter:image" content="https://danielrohers.com/assets/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link href="https://danielrohers.comfeed.xml" type="application/rss+xml" rel="alternate" title="Daniel Röhers Moura Last 10 blog posts" />
+
+  
+    <link type="text/css" rel="stylesheet" href="/assets/light.css">
+  
+</head>
+
+<body>
+  <main role="main">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav reveal">
+  <a href="/" class="header-logo" title="Daniel Röhers Moura">Daniel Röhers Moura</a>
+  <div class="header-description">
+      <p>JavaScript Lover | Web Evangelist</p>
+      <p>Software Developer Engineer at <a href="https://handson.tv" class="handson">HandsOn.TV</a></p>
+  </div>
+  <ul class="header-links">
+    
+      <li>
+        <a href="http://twitter.com/danielrohers" target="_blank" title="Twitter">
+          <span class="icon icon-social-twitter"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://facebook.com/danielrohers" target="_blank" title="Facebook">
+          <span class="icon icon-social-facebook"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/danielrohers" target="_blank" title="GitHub">
+          <span class="icon icon-social-github"></span>
+        </a>
+      </li>
+    
+    
+    
+      <li>
+        <a href="https://linkedin.com/in/danielrohers/en" target="_blank" title="LinkedIn">
+          <span class="icon icon-social-linkedin"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed.xml" target="_blank" title="RSS">
+          <span class="icon icon-social-rss"></span>
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+        <article class="article reveal">
+          <header class="article-header">
+            <h1>Mustache</h1>
+            <p>Bueno... Esse post não será longo, vamos direto ao ponto.</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                May 19, 2016
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  4 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <p>Bueno… Esse post não será longo, vamos direto ao ponto.</p>
+
+<p>Você provavelmente já passou por algo assim algum dia:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">$name</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div/&gt;'</span><span class="p">,</span> <span class="p">{</span> <span class="na">class</span><span class="p">:</span> <span class="s1">'form-group'</span> <span class="p">}).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;input/&gt;'</span><span class="p">,</span> <span class="p">{</span>  
+  <span class="na">class</span><span class="p">:</span> <span class="s1">'form-control required'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'text'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'name'</span><span class="p">,</span>
+  <span class="na">placeholder</span><span class="p">:</span> <span class="s1">'Name'</span><span class="p">,</span>
+<span class="p">}).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'required'</span><span class="p">,</span> <span class="kc">true</span><span class="p">));</span>
+
+<span class="kd">var</span> <span class="nx">$email</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div/&gt;'</span><span class="p">,</span> <span class="p">{</span> <span class="na">class</span><span class="p">:</span> <span class="s1">'form-group'</span> <span class="p">}).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;input/&gt;'</span><span class="p">,</span> <span class="p">{</span>  
+  <span class="na">class</span><span class="p">:</span> <span class="s1">'form-control required email'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'email'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'email'</span><span class="p">,</span>
+  <span class="na">placeholder</span><span class="p">:</span> <span class="s1">'Email'</span><span class="p">,</span>
+<span class="p">}).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'required'</span><span class="p">,</span> <span class="kc">true</span><span class="p">));</span>
+
+<span class="kd">var</span> <span class="nx">$textarea</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div/&gt;'</span><span class="p">,</span> <span class="p">{</span> <span class="na">class</span><span class="p">:</span> <span class="s1">'form-group'</span> <span class="p">}).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;textarea/&gt;'</span><span class="p">,</span> <span class="p">{</span>  
+  <span class="na">class</span><span class="p">:</span> <span class="s1">'form-control required'</span><span class="p">,</span>
+  <span class="na">rows</span><span class="p">:</span> <span class="s1">'4'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'body'</span><span class="p">,</span>
+  <span class="na">placeholder</span><span class="p">:</span> <span class="s1">'Add a comment...'</span><span class="p">,</span>
+<span class="p">}).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'required'</span><span class="p">,</span> <span class="kc">true</span><span class="p">));</span>
+
+<span class="kd">var</span> <span class="nx">$button</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;button/&gt;'</span><span class="p">,</span> <span class="p">{</span> <span class="na">class</span><span class="p">:</span> <span class="s1">'btn btn-default'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s1">'submit'</span> <span class="p">}).</span><span class="nx">html</span><span class="p">(</span><span class="s1">'Post Reply'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">$form</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;form/&gt;'</span><span class="p">,</span> <span class="p">{</span>  
+  <span class="na">class</span><span class="p">:</span> <span class="s1">'player-comment-form'</span><span class="p">,</span>
+  <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">,</span>
+  <span class="na">role</span><span class="p">:</span> <span class="s1">'form'</span><span class="p">,</span>
+  <span class="na">action</span><span class="p">:</span> <span class="s1">'/video/'</span> <span class="o">+</span> <span class="nx">slug</span> <span class="o">+</span> <span class="s1">'/comment/'</span> <span class="o">+</span> <span class="nx">commentId</span> <span class="o">+</span> <span class="s1">'/child'</span><span class="p">,</span>
+  <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span>
+<span class="p">});</span>
+
+<span class="nx">$form</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">$name</span><span class="p">);</span>
+<span class="nx">$form</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">$email</span><span class="p">);</span>
+<span class="nx">$form</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">$textarea</span><span class="p">);</span>
+<span class="nx">$form</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">$button</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Ou então em vez de criar elementos DOM, você concatenou Strings, tipo…</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>  
+<span class="nx">htlm</span> <span class="o">+=</span> <span class="s1">'&lt;form style="" role="form" action="/video/'</span> <span class="o">+</span> <span class="nx">slug</span> <span class="o">+</span> <span class="s1">'/comment/'</span> <span class="o">+</span> <span class="nx">commentId</span> <span class="o">+</span> <span class="s1">'/child" method="POST" class="player-comment-form"&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'  &lt;div class="form-group"&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'    &lt;input type="text" name="name" placeholder="Name" value="" required="" class="form-control required"&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'  &lt;/div&gt;'</span><span class="p">;</span>
+
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'  &lt;div class="form-group"&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'    &lt;input type="email" name="email" placeholder="Email" value="" required="" class="form-control required email"&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'  &lt;/div&gt;'</span><span class="p">;</span>
+
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'  &lt;div class="form-group"&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'    &lt;textarea rows="4" name="body" placeholder="Add a comment..." required="" class="form-control required"&gt;&lt;/textarea&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'  &lt;/div&gt;'</span><span class="p">;</span>
+
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'  &lt;button type="submit" class="btn btn-default"&gt;Post Reply&lt;/button&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'&lt;/form&gt;'</span><span class="p">;</span>  
+</code></pre>
+</div>
+
+<p>Algo mais simples…</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'&lt;div&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'  &lt;h1&gt;'</span> <span class="o">+</span> <span class="nx">title</span> <span class="o">+</span> <span class="s1">'&lt;/h1&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'  &lt;p&gt;'</span> <span class="o">+</span> <span class="nx">description</span> <span class="o">+</span> <span class="s1">'&lt;/p&gt;'</span><span class="p">;</span>  
+<span class="nx">html</span> <span class="o">+=</span> <span class="s1">'&lt;/div&gt;'</span><span class="p">;</span>  
+</code></pre>
+</div>
+
+<p>Pois bem, seus dias de sofrimento acabaram. Conheça agora <a href="https://mustache.github.io/">Mustache</a> :)</p>
+
+<h1 id="mustache">Mustache</h1>
+
+<p>Mustache nada mais é, do que um simples, cru e nú template engine que é compatível com N linguagens e também possui um CLI.</p>
+
+<h1 id="instalando">Instalando</h1>
+<p>Possuindo só 10KB, instalar não é um mistério :)</p>
+
+<p>No caso de JS, você pode instalar…</p>
+
+<p>Via NPM:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="o">[</span>sudo] npm install mustache --save
+</code></pre>
+</div>
+
+<p>Via bower:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>bower install --save mustache
+</code></pre>
+</div>
+
+<p>CLI:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="o">[</span>sudo] npm install -g mustache
+mustache dataView.json myTemplate.mustache &gt; output.html
+</code></pre>
+</div>
+
+<p>CDN:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js "</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<h1 id="usando-e-sendo-feliz">Usando e sendo feliz</h1>
+
+<p>Você pode conferir a documentação <a href="https://github.com/janl/mustache.js">aqui</a></p>
+
+<p>Para exemplificar, iremos utilizar o código anterior.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>  
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'Mustache'</span><span class="p">,</span>
+  <span class="na">description</span><span class="p">:</span> <span class="s1">'sendo feliz'</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">Mustache</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'&lt;div&gt;&lt;h1&gt;&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'target'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">output</span><span class="p">;</span>  
+</code></pre>
+</div>
+
+<p>E era isso, agora é bem mais fácil do que ficar concatenando Strings ;)</p>
+
+<p>Mas, espera aí… Nem sempre seu template será simples assim e daí?</p>
+
+<p>Aí você utiliza os templates :)</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">id=</span><span class="s">"template"</span> <span class="na">type=</span><span class="s">"x-tmpl-mustache"</span><span class="nt">&gt;</span>  
+  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="nt">&lt;/script&gt;</span>  
+</code></pre>
+</div>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'template'</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>  
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'Mustache'</span><span class="p">,</span>
+  <span class="na">description</span><span class="p">:</span> <span class="s1">'sendo feliz'</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">Mustache</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'target'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">output</span><span class="p">;</span>  
+</code></pre>
+</div>
+
+<p>Agora SIM! :D</p>
+
+<h1 id="finalizando">Finalizando</h1>
+
+<p>Os exemplos são simples porque acredite, é simples de usar :)</p>
+
+<p>Além disso, existe várias outras coisas que se pode fazer, como utilização de <a href="https://github.com/janl/mustache.js#non-empty-lists">listas</a>, <a href="https://github.com/janl/mustache.js#false-values-or-empty-lists">condicionais</a> de uma forma um tanto quanto diferente, <a href="https://github.com/janl/mustache.js#functions">funções</a> e outras features.</p>
+
+<p>Espero que daqui para frente você não sofra mais realizando esse tipo de trabalho.</p>
+
+<p>Até mais!</p>
+
+          </div>
+
+          <div class="article-share">
+            
+            <a href="" title="Share on Twitter" onclick="window.open('https://twitter.com/home?status=Mustache - https://danielrohers.com/mustache by @danielrohers', 'newwindow', 'width=500, height=225'); return false;">
+              <span class="icon icon-social-twitter"></span>
+            </a>
+            <a href="" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://danielrohers.com/mustache', 'newwindow', 'width=500, height=500'); return false;">
+              <span class="icon icon-social-facebook"></span>
+            </a>
+            <a href="" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=https://danielrohers.com/mustache', 'newwindow', 'width=550, height=400'); return false;">
+              <span class="icon icon-social-googleplus"></span>
+            </a>
+          </div>
+
+          
+            <div id="disqus_thread" class="article-comments"></div>
+            <script>
+              (function() {
+                  var d = document, s = d.createElement('script');
+                  s.src = '//danielrohers.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          
+        </article>
+        <footer class="footer reveal">
+  <p>
+    Daniel Röhers Moura © 2016
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="/assets/vendor.js"></script>
+<script type="text/javascript" src="/assets/application.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Cormorant Garamond:700', 'Lato:300,400,700']
+    }
+  });
+</script>
+
+
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-73370942-1','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
