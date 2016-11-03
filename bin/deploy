@@ -8,7 +8,7 @@ set -e
 echo "Started deploying"
 
 git checkout master
-git merge jekyll
+git reset --hard jekyll
 
 # Build site.
 bower install
