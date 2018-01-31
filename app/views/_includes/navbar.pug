@@ -1,0 +1,21 @@
+header.header
+  nav
+    -
+      var links = [
+        {
+          name: 'DR',
+          href: '/'
+        },
+        {
+          name: 'Medium',
+          href: 'https://medium.com/@danielrohers'
+        },
+        {
+          name: '@danielrohers',
+          href: 'https://www.instagram.com/danielrohersphotos'
+        }
+      ]
+    ul.header__links
+      each link in links
+        li
+          a.header__link(href=`${link.href}`) #{link.name}

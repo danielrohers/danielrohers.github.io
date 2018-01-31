@@ -1,0 +1,20 @@
+extends _layouts/default
+
+block defer
+  script(src="https://cdn.jsdelivr.net/npm/mustache@2.3.0/mustache.min.js")
+  script(src="/javascripts/instagram.js")
+  script(id="template" type="x-tmpl-mustache").
+    {{#medias}}
+      <a href="{{ link }}" class="instagram__link">
+        <div class="instagram__overlay"></div>
+        <img src="{{ images.low_resolution.url }}" class="instagram__image" />
+      </a>
+    {{/medias}}
+
+block content
+  
+  #instagram.instagram
+    each media in medias
+      a(href=`${media.link}` class="instagram__link")
+        .instagram__overlay
+        img(src=`${media.images.low_resolution.url}` class="instagram__image")

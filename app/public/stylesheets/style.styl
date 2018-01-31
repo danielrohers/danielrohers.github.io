@@ -1,0 +1,87 @@
+//
+// VARIABLES
+//
+
+$color-default = #ffffff
+$primary-color = #262525
+$secondary-color = #383838
+
+//
+// MIXINS
+//
+
+transition()
+  transition: all 0.3s ease-out
+
+//
+// RESET
+//
+
+*
+  box-sizing: border-box
+  color: $color-default
+  list-style: none
+  margin: 0
+  padding: 0
+
+body
+  background-color: $primary-color
+
+
+//
+// HEADER
+//
+
+.header
+  background: $secondary-color
+  border-bottom: 1px solid $secondary-color
+  margin-bottom: 20px
+
+  &__links
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    height: 80px
+    margin: 0 20px
+
+  &__link
+    transition()
+    text-decoration: none
+    height: 100%;
+    align-items: center;
+    display: inline-flex;
+    padding: 0 20px;
+
+    &:hover
+      background: $primary-color
+
+
+//
+// INSTAGRAM
+//
+
+.instagram
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: center
+
+  &__link
+    position: relative
+    margin: 10px 0
+
+  &__overlay
+    transition()
+    background: $primary-color;
+    opacity: 0.5
+    height: 100%;
+    width: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &:hover
+      opacity: 0

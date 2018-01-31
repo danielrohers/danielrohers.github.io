@@ -1,0 +1,38 @@
+doctype html(lang='en')
+
+head
+  meta(charset='utf-8')
+  meta(http-equiv="x-ua-compatible" content="ie=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+
+  - var title = 'Daniel Röhers Moura | Photographer | Software Engineer | JavaScript Lover | Nikon'
+  - var url = 'https://danielrohers.com'
+  - var description = 'Nikon Brazilian Photographer and Software Engineer'
+
+  meta(name="description" content=`${description}`)
+
+  meta(property="og:title" content=`${title}`)
+  meta(property="og:type" content="website")
+  meta(property="og:url" content=`${url}`)
+  meta(property="og:description" content=`${description}`)
+  meta(property="og:site_name" content="Daniel Röhers Moura")
+
+  meta(name="twitter:card" content="summary")
+  meta(name="twitter:url" content=`${url}`)
+  meta(name="twitter:title" content=`${title}`)
+  meta(name="twitter:description" content=`${description}`)
+
+  title #{title}
+
+  link(rel="icon" href="/favicon.ico")
+  link(href='/stylesheets/style.css', rel='stylesheet')
+
+  block head
+
+body
+  include ../_includes/navbar
+
+  block content
+  
+  include ../_includes/ga
+  block defer
