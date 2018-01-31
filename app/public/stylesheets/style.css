@@ -26,10 +26,14 @@ body {
   height: 100%;
   align-items: center;
   display: inline-flex;
+  position: relative;
   padding: 0 20px;
 }
 .header__link:hover {
   background: #262525;
+}
+.header .highlight {
+  font-size: 30px;
 }
 .instagram {
   display: flex;

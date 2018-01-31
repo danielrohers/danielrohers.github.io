@@ -4,18 +4,19 @@ header.header
       var links = [
         {
           name: 'DR',
-          href: '/'
+          href: '/',
+          class: 'highlight'
         },
         {
           name: 'Medium',
           href: 'https://medium.com/@danielrohers'
         },
         {
-          name: '@danielrohers',
+          name: 'Instagram',
           href: 'https://www.instagram.com/danielrohersphotos'
         }
       ]
     ul.header__links
       each link in links
         li
-          a.header__link(href=`${link.href}`) #{link.name}
+          a(href=`${link.href}` class=`header__link ${link.class || ''}`) !{link.name}
