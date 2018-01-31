@@ -11,9 +11,11 @@
     "debug": "~2.6.9",
     "dotenv": "^5.0.0",
     "express": "~4.15.5",
+    "helmet": "^3.10.0",
     "instagram-node": "^0.5.8",
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11",
-    "stylus": "0.54.5"
+    "stylus": "0.54.5",
+    "winston": "^2.4.0"
   }
 }
