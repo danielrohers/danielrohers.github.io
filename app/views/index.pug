@@ -1,24 +1,20 @@
 extends _layouts/default
 
 block defer
-  script(src="https://cdn.jsdelivr.net/npm/mustache@2.3.0/mustache.min.js")
+  script(src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js")
   script(src="https://unpkg.com/masonry-layout@4.2.1/dist/masonry.pkgd.min.js")
   script(src="/javascripts/instagram.js")
-  script(id="template" type="x-tmpl-mustache").
-    {{#medias}}
-      <a href="{{ link }}" class="instagram__link">
-        <div class="instagram__wrapper">
-          <img src="{{ images.low_resolution.url }}" class="instagram__image" />
-          <div class="instagram__overlay"></div>
-        </div>
-      </a>
-    {{/medias}}
 
 block content
   
   #js-instagram.instagram
     each media in medias
-      a(href=`${media.link}` class="instagram__link")
+      a(href=`${ media.link }` class="instagram__link")
         .instagram__wrapper
-          img(src=`${media.images.low_resolution.url}` class="instagram__image")
+          img(src=`${ media.images.low_resolution.url }` class="instagram__image")
           .instagram__overlay
+
+    a(v-bind:href="media.link" class="instagram__link" v-for="media in medias" :key="media.id")
+      .instagram__wrapper
+        img(v-bind:src="media.images.low_resolution.url" class="instagram__image")
+        .instagram__overlay

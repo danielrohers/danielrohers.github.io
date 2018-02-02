@@ -5,10 +5,19 @@
   var Instagram = (function () {
 
     var _grid;
-    var _instagramGrid = document.getElementById('js-instagram');
+    var _vue = new Vue({
+      el: '#js-instagram',
+      data: {
+        medias: []
+      },
+      updated: function () {
+        _grid.reloadItems();
+        _grid.layout();
+      }
+    });
 
     var _gallery = function () {
-      _grid = new Masonry(_instagramGrid, {
+      _grid = new Masonry('#js-instagram', {
         itemSelector: '.instagram__link',
         gutter: 10,
         fitWidth: true
@@ -25,11 +34,7 @@
               var data = JSON.parse(this.responseText);
               paginationMedias = !!data.medias;
               if (paginationMedias) {
-                var template = document.getElementById('template').innerHTML;
-                var output = Mustache.render(template, data);
-                _instagramGrid.insertAdjacentHTML('beforeend', output);
-                _grid.reloadItems();
-                _grid.layout();
+                _vue.medias.push.apply(_vue.medias, data.medias);
               }
             }
           };
