@@ -27,6 +27,8 @@ transition()
 body
   background-color: $primary-color
 
+p
+  line-height: 30px
 
 //
 // HEADER
@@ -61,18 +63,17 @@ body
 
 
 //
-// INSTAGRAM
+// INDEX
 //
 
 .instagram
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-around
-  align-items: center
+  margin: 0 auto
 
   &__link
+    margin-bottom: 10px
+
+  &__wrapper
     position: relative
-    margin: 10px 0
 
   &__overlay
     transition()
@@ -89,3 +90,18 @@ body
 
     &:hover
       opacity: 0
+
+//
+// ABOUT
+//
+
+.about
+  margin-left: 50%
+  transform: translateX(-50%)
+
+  &__title
+    margin-bottom: 20px
+    text-align: center
+
+  &__projects
+    margin-left: 20px

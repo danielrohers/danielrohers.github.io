@@ -8,6 +8,9 @@
 body {
   background-color: #222;
 }
+p {
+  line-height: 30px;
+}
 .header {
   background: #333;
   border-bottom: 1px solid #555;
@@ -36,14 +39,13 @@ body {
   font-size: 30px;
 }
 .instagram {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  margin: 0 auto;
 }
 .instagram__link {
+  margin-bottom: 10px;
+}
+.instagram__wrapper {
   position: relative;
-  margin: 10px 0;
 }
 .instagram__overlay {
   transition: all 0.3s ease-out;
@@ -60,4 +62,15 @@ body {
 }
 .instagram__overlay:hover {
   opacity: 0;
+}
+.about {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.about__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about__projects {
+  margin-left: 20px;
 }

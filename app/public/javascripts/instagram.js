@@ -4,6 +4,17 @@
 
   var Instagram = (function () {
 
+    var _grid;
+    var _instagramGrid = document.getElementById('js-instagram');
+
+    var _gallery = function () {
+      _grid = new Masonry(_instagramGrid, {
+        itemSelector: '.instagram__link',
+        gutter: 10,
+        fitWidth: true
+      });
+    };
+
     var _pagination = function () {
       var paginationMedias = true;
       window.addEventListener('scroll', function () {
@@ -16,7 +27,9 @@
               if (paginationMedias) {
                 var template = document.getElementById('template').innerHTML;
                 var output = Mustache.render(template, data);
-                document.getElementById('instagram').insertAdjacentHTML('beforeend', output);
+                _instagramGrid.insertAdjacentHTML('beforeend', output);
+                _grid.reloadItems();
+                _grid.layout();
               }
             }
           };
@@ -31,6 +44,7 @@
 
     return {
       init: function () {
+        _gallery();
         _pagination();
       }
     }

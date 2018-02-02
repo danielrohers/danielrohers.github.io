@@ -5,7 +5,8 @@ head
   meta(http-equiv="x-ua-compatible" content="ie=edge")
   meta(name="viewport" content="width=device-width, initial-scale=1")
 
-  - var title = 'Daniel Röhers Moura | Photographer | Software Engineer | JavaScript Lover | Nikon'
+  - var defaultTitle = 'Daniel Röhers Moura | Photographer | Software Engineer | JavaScript Lover | Nikon'
+  - title = title ? `${title} - ${defaultTitle}` : defaultTitle
   - var url = 'https://danielrohers.com'
   - var description = 'Nikon Brazilian Photographer and Software Engineer'
 

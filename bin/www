@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-require('dotenv').config();
-
 const log = require('winston');
 
 const cluster = require('cluster');
