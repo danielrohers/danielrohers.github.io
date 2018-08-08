@@ -10,6 +10,10 @@ module.exports = {
 
   accessToken: _getEnv('INSTAGRAM_ACCESS_TOKEN'),
 
-  userId: _getEnv('INSTAGRAM_USER_ID')
+  userId: _getEnv('INSTAGRAM_USER_ID'),
+
+  googleAnalytics: _getEnv('GOOGLE_ANALYTICS'),
+
+  googleTagManager: _getEnv('GOOGLE_TAG_MANAGER')
 
 };
