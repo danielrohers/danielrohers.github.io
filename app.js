@@ -9,7 +9,7 @@ const stylus = require('stylus');
 const log = require('winston');
 const helmet = require('helmet');
 
-const { port, googleAnalytics, googleTagManager } = require('./config/env');
+const { port, googleAnalytics, googleTagManager, googleOptimize } = require('./config/env');
 const routes = require('./config/routes');
 
 const app = express();
@@ -19,6 +19,7 @@ app.use(helmet());
 // view engine setup
 app.locals.googleAnalytics = googleAnalytics;
 app.locals.googleTagManager = googleTagManager;
+app.locals.googleOptimize = googleOptimize;
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'pug');
 
