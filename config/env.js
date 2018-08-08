@@ -14,6 +14,8 @@ module.exports = {
 
   googleAnalytics: _getEnv('GOOGLE_ANALYTICS'),
 
-  googleTagManager: _getEnv('GOOGLE_TAG_MANAGER')
+  googleTagManager: _getEnv('GOOGLE_TAG_MANAGER'),
+  
+  googleOptimize: _getEnv('GOOGLE_OPTIMIZE')
 
 };
